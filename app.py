@@ -60,7 +60,7 @@ def index():
             lng = location.get('lng')
     else:
         return render_template('address.html')
-    key = "add26578-0172-4706-a61c-1a90f5e3a38a"
+    key = "" #key obtainded from txtweb, http://developer.txtweb.com
     locat = str(lat) + "," + str(lng)
     url = "https://maps.googleapis.com/maps/api/place/textsearch/json?query="+ str(q) +"&radius=1000&location="+ locat +"&sensor=false&key=AIzaSyAdAQtiMBsm-YfTwePiGTylHFXY6g5xFcs"
     data = urllib2.urlopen(url)
